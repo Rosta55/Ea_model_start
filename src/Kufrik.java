@@ -1,4 +1,3 @@
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -69,37 +68,35 @@ public class Kufrik {
 		// TODO projděte si tento kod a okomentujte mista kde nevite co to děla
 		// TODO překopirovat do Junit testu
 
-		Kufrik kufrik = new Kufrik(10, 10, "Pěkny mali postribreny kufrik");
+		Kufrik kufrik = new Kufrik(10, 10, "Pěkný malý postříbřený kufřík");
 
-		class TestTuska implements IVec{
+		class TestTuzka implements IVec{
 			public double vaha=2;
 			@Override
 			public void pouzij() {
-				System.out.println("pouzivam tusku");
+				System.out.println("Používám tužku");
 			}
-
 			@Override
 			public double getVaha() {
 				return vaha;
 			}
 		}
 
+		IVec tuzka = new TestTuzka();
 
-		IVec tuska = new TestTuska();
+		System.out.println(kufrik.vlozitVec(tuzka));
 
-		System.out.println(kufrik.vlozitVec(tuska));
-
-		TestTuska vec = (TestTuska)  kufrik.vyndatVec(0);
+		TestTuzka vec = (TestTuzka)  kufrik.vyndatVec(0);
 
 		System.out.println(vec.vaha);
 		vec.vaha=5;
 		System.out.println(vec.vaha);
 
-		kufrik.vlozitVec(tuska);
+		kufrik.vlozitVec(tuzka);
 
 		List<IVec> list = kufrik.vysypatObsahKufriku();
 		System.out.println(list.get(0).getVaha());
-		TestTuska unmodif =(TestTuska) list.get(0);
+		TestTuzka unmodif =(TestTuzka) list.get(0);
 
 		System.out.println("------------");
 

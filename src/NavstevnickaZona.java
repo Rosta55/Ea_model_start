@@ -58,7 +58,7 @@ public class NavstevnickaZona extends Mistnost{
         System.out.println("0) prohledej mistnost");
         System.out.println("1) jit pryč");
 
-        switch (HerniEngine.prectiVstupOdUzivatele()){
+        switch (HerniEngine.prectiVstupOdUzivateleInt()){
             case 0:
 
             case 1:

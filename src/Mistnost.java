@@ -32,7 +32,7 @@ public abstract class Mistnost implements IMistnost {
     @Override
     public void chciJitPryc(){
         zobrazMozneMistnosti();
-        HerniEngine.getHerniEngine().setAktualniPolohaUzivatele(getMistost(HerniEngine.prectiVstupOdUzivatele()));
+        HerniEngine.getHerniEngine().setAktualniPolohaUzivatele(getMistost(HerniEngine.prectiVstupOdUzivateleInt()));
     }
 
     /**

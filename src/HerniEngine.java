@@ -70,9 +70,7 @@ public class HerniEngine {
 		Mistnosti kancelarGR = new KancelarGr();
 		Mistnosti navstevnickaZona = new NavstevnickaZona();*/
 
-
         aktualniPolohaUzivatele = sklep;
-
 	}
 
 	public void finalize() throws Throwable {
@@ -85,7 +83,6 @@ public class HerniEngine {
 		while (!konecHry){
 			aktualniPolohaUzivatele.interakce();
 		}
-
 	}
 
 	public IMistnost getAktualniPolohaUzivatele(){
@@ -103,17 +100,29 @@ public class HerniEngine {
 		return null;
 	}
 
-	public static int prectiVstupOdUzivatele(){
-		Scanner scaner = new Scanner(System.in);
-		return scaner.nextInt();
+	public static int prectiVstupOdUzivateleInt(){
+		Scanner vstupCisla = new Scanner(System.in);
+		return vstupCisla.nextInt();
 	}
+
+	public static String prectiVstupOdUzivateleString()
+    {
+        Scanner vstupTextu = new Scanner(System.in);
+        return vstupTextu.nextLine();
+    }
 
 	public void ukonceniHry()
 	{
 		//TODO tady se zhodnotí čeho hrač dosáhnul, vytiskne skore, čas straveny ve hře atp...
-        /* Úspěšně jste dokončili hru a stali jste se generálním ředitelem společnosti.
-         Můžete směle začít rozhodovat o budoucnosti a směru této společnosti.
-         GRATULUJEME !!! :-)
+        /* Varianta GŘ:
+        Úspěšně jste dokončili hru a stali jste se generálním ředitelem společnosti.
+        Můžete směle začít rozhodovat o budoucnosti a směru této společnosti.
+        GRATULUJEME !!! :-)
+
+        Varianta dlažba:
+        Skončili jste tzv. na dlažbě a už nikdy nebudete v této společnosti zaměstnán. Příčinou je naprostá lenost pracovat,
+        nicméně pokud vám to charakter dovoluje, tak jste se stali zcela svobodní a nezávislí na korporátním mamonu.
+        Přejeme hodně úspěchů v budoucím životě :) !!!
          */
 
 	}

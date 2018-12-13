@@ -1,5 +1,4 @@
-
-
+import java.util.Scanner;
 /**
  *
  * Sklep
@@ -21,11 +20,11 @@ public class Sklep extends Mistnost {
 	public Sklep(String jmeno){
 		super();
 		this.jmenoMistnosti = jmeno;
-
 	}
 
 	@Override
-	public void chciJitPryc() {
+	public void chciJitPryc()
+    {
 
 	}
 
@@ -35,26 +34,36 @@ public class Sklep extends Mistnost {
 	}
 
     @Override
-    public void interakce() {
-
+    public void interakce()
+    {
         tlacitko();
-
-
     }
-
 
     private void tlacitko(){
         System.out.println("Nalezl jsi tlačítko. \n chceš ho zmačknout? \n 0- ano \n 1- ne");
-        int vstup = HerniEngine.prectiVstupOdUzivatele();
-        String pass = "";
+        int vstup = HerniEngine.prectiVstupOdUzivateleInt();
+        String hesloProPanel = "4IT353";
         switch (vstup){
             case 0:
-                System.out.println("Ze zdi vyjizdi maly panýlek do kterho můžeš zadavat hodnoty");
-                System.out.println("zkus tam něco zadat");
-                //vstup = HerniEngine.prectiVstupOdUzivatele();
-                // TODO potřeba přečís i string o d uživatele
-                if(pass == "top secred pass") {
+                System.out.println("Ze zdi vyjíždí malý panýlek do kterého můžeš zadávat hodnoty: ");
+                System.out.print("Zkus tam něco zadat: ");
+                String vstupProHeslo = HerniEngine.prectiVstupOdUzivateleString();
+                // TODO potřeba přečís i string od uživatele
+
+                if (!vstupProHeslo.contains("4IT353"))
+                {
+                    System.out.println("Zadali jste špatné heslo, nápověda pro heslo je ident předmětu pro pokročilé borce. ");
+                }
+
+                else if(vstupProHeslo.contains("4IT353"))
+                {
+                    // TODO přesunout na úspěšné ukončení (viz varianty konce)
                     HerniEngine.getHerniEngine().ukonceniHry();
+                }
+
+                else
+                {
+                    System.out.println("Zadali jste opět špatné heslo, nic se nestane.");
                 }
                 // TODO AKCE KDYŽ ZADA ŠPATNÉ HESLO
                 break;
