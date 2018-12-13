@@ -108,8 +108,14 @@ public class HerniEngine {
 		return scaner.nextInt();
 	}
 
-	public void ukonceniHry(){
+	public void ukonceniHry()
+	{
 		//TODO tady se zhodnotí čeho hrač dosáhnul, vytiskne skore, čas straveny ve hře atp...
+        /* Úspěšně jste dokončili hru a stali jste se generálním ředitelem společnosti.
+         Můžete směle začít rozhodovat o budoucnosti a směru této společnosti.
+         GRATULUJEME !!! :-)
+         */
+
 	}
 
 	public int vybratPrikaz(){
